@@ -322,7 +322,9 @@ def delete_student(id):
     return redirect(url_for("students"))
 
 
-# Run application
+# Initialize database when the app starts
+init_db()
+
+# Run application locally
 if __name__ == "__main__":
-    init_db()
     app.run(debug=True)
